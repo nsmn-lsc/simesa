@@ -1707,8 +1707,880 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
 							</div>
 				</form></div>  <!-- .wpforms-container ==>
 </div>
-FORMULARIO DE CONTACTO DESHABILITADO TEMPORALMENTE FIN -->
-FORMULARIO DE CONTACTO EN DESARROLLO
+<!-- ========================================================
+     INICIO: FORMULARIO DE CAPTACIÓN SIMESA-NEXUS
+======================================================== -->
+<style id="simesa-captacion-css">
+  .simesa-captacion-container {
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #ffffff;
+    padding: 10px 0;
+  }
+  .simesa-captacion-header {
+    margin-bottom: 22px;
+  }
+  .simesa-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(200, 153, 51, 0.18);
+    color: #ffd875;
+    border: 1px solid rgba(200, 153, 51, 0.45);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .simesa-form-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 10px 0 8px 0;
+    line-height: 1.25;
+  }
+  .simesa-form-subtitle {
+    font-size: 14px;
+    color: #e2e8f0;
+    line-height: 1.55;
+    margin: 0;
+  }
+  .simesa-field-group {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+  .simesa-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f8fafc;
+    margin-bottom: 7px;
+    letter-spacing: 0.2px;
+  }
+  .simesa-required {
+    color: #ffd875;
+    font-weight: 700;
+    margin-left: 2px;
+  }
+  .simesa-optional {
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 4px;
+  }
+  .simesa-input-wrap {
+    position: relative;
+    width: 100%;
+  }
+  .simesa-input,
+  .simesa-select,
+  .simesa-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    background-color: #ffffff;
+    color: #0f172a;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .simesa-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2364748b'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    padding-right: 40px;
+    cursor: pointer;
+  }
+  .simesa-input::placeholder,
+  .simesa-textarea::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+  }
+  .simesa-input:focus,
+  .simesa-select:focus,
+  .simesa-textarea:focus {
+    outline: none;
+    border-color: #c89933;
+    box-shadow: 0 0 0 3px rgba(200, 153, 51, 0.35);
+    background-color: #ffffff;
+  }
+  .simesa-input.is-invalid,
+  .simesa-select.is-invalid,
+  .simesa-textarea.is-invalid {
+    border-color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25) !important;
+  }
+  .simesa-input-help {
+    display: block;
+    font-size: 12px;
+    color: #cbd5e1;
+    margin-top: 5px;
+    line-height: 1.4;
+  }
+  .simesa-field-error {
+    display: none;
+    color: #fecaca;
+    background: rgba(220, 38, 38, 0.25);
+    border-left: 3px solid #ef4444;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    margin-top: 6px;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+  .simesa-privacy-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 13px 15px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: #e2e8f0;
+    line-height: 1.5;
+  }
+  .simesa-privacy-icon {
+    flex-shrink: 0;
+    color: #ffd875;
+    margin-top: 2px;
+  }
+  .simesa-privacy-text a {
+    color: #ffd875;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.15s ease;
+  }
+  .simesa-privacy-text a:hover {
+    color: #ffffff;
+  }
+  .simesa-alert {
+    border-radius: 9px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .simesa-alert-error {
+    background-color: #fee2e2;
+    border: 1.5px solid #f87171;
+    color: #991b1b;
+  }
+  .simesa-alert-warning {
+    background-color: #fef3c7;
+    border: 1.5px solid #f59e0b;
+    color: #92400e;
+  }
+  .simesa-alert-success {
+    background-color: #d1fae5;
+    border: 1.5px solid #34d399;
+    color: #065f46;
+  }
+  .simesa-btn-primary {
+    width: 100%;
+    background-color: #c89933;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 14px rgba(200, 153, 51, 0.4);
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .simesa-btn-primary:hover:not(:disabled) {
+    background-color: #b58524;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(200, 153, 51, 0.5);
+  }
+  .simesa-btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+  }
+  .simesa-btn-primary:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  .simesa-spinner {
+    animation: simesaSpin 0.9s linear infinite;
+  }
+  @keyframes simesaSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Modales Accesibles */
+  .simesa-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+  .simesa-modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  .simesa-modal-card {
+    background: #ffffff;
+    color: #1e293b;
+    border-radius: 16px;
+    max-width: 540px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px 28px;
+    box-sizing: border-box;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    transform: scale(0.92);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: left;
+    position: relative;
+  }
+  .simesa-modal-backdrop.is-open .simesa-modal-card {
+    transform: scale(1);
+  }
+  .simesa-modal-success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #fef3c7;
+    border: 3px solid #c89933;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
+    color: #c89933;
+  }
+  .simesa-modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  .simesa-modal-desc {
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+    text-align: center;
+  }
+  .simesa-modal-btn {
+    display: block;
+    width: 100%;
+    background: #202557;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s ease;
+  }
+  .simesa-modal-btn:hover {
+    background: #151940;
+  }
+  .simesa-privacy-content h4 {
+    color: #202557;
+    font-size: 18px;
+    margin: 16px 0 8px 0;
+  }
+  .simesa-privacy-content p {
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .simesa-modal-close-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #64748b;
+    transition: all 0.15s ease;
+  }
+  .simesa-modal-close-icon:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+  }
+</style>
+
+<div class="simesa-captacion-container" id="simesa-captacion-container">
+  <div class="simesa-captacion-header">
+    <span class="simesa-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      SIMESA-Nexus
+    </span>
+    <h3 class="simesa-form-title">Pre-Afiliación Sindical</h3>
+    <p class="simesa-form-subtitle">Sindicato Mexicano de Salud - Sección Hidalgo. Envía tus datos y un delegado regional se pondrá en contacto para resolver tus dudas y orientarte en el proceso.</p>
+  </div>
+
+  <!-- Contenedor dinámico de alertas -->
+  <div id="simesa-alert-box" class="simesa-alert" style="display: none;" role="alert" aria-live="polite"></div>
+
+  <form id="simesa-captacion-form" novalidate>
+    <!-- Honeypot anti-spam: campo oculto para usuarios humanos -->
+    <div style="display:none !important; position:absolute !important; left:-9999px !important; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+      <label for="empresa_actual">Empresa Actual</label>
+      <input type="text" id="empresa_actual" name="empresa_actual" tabindex="-1" autocomplete="off" value="">
+    </div>
+
+    <!-- 1. Nombre Completo -->
+    <div class="simesa-field-group" id="group-nombre_completo">
+      <label for="nombre_completo" class="simesa-label">
+        Nombre Completo <span class="simesa-required" title="Campo requerido">*</span>
+      </label>
+      <div class="simesa-input-wrap">
+        <input 
+          type="text" 
+          id="nombre_completo" 
+          name="nombre_completo" 
+          class="simesa-input" 
+          placeholder="Ej. Enfra. Laura Gómez Téllez" 
+          minlength="5" 
+          required 
+          autocomplete="name">
+      </div>
+      <div class="simesa-field-error" id="error-nombre_completo"></div>
+    </div>
+
+    <!-- 2. Teléfono Móvil -->
+    <div class="simesa-field-group" id="group-telefono">
+      <label for="telefono" class="simesa-label">
+        Teléfono Móvil (10 dígitos) <span class="simesa-required" title="Campo requerido">*</span>
+      </label>
+      <div class="simesa-input-wrap">
+        <input 
+          type="tel" 
+          id="telefono" 
+          name="telefono" 
+          class="simesa-input" 
+          placeholder="Ej. 7711234502" 
+          maxlength="10" 
+          pattern="^[0-9]{10}$" 
+          inputmode="numeric" 
+          required 
+          autocomplete="tel">
+      </div>
+      <small class="simesa-input-help">Ingresa los 10 dígitos numéricos de tu celular.</small>
+      <div class="simesa-field-error" id="error-telefono"></div>
+    </div>
+
+    <!-- 3. Municipio (84 municipios de Hidalgo) -->
+    <div class="simesa-field-group" id="group-municipio">
+      <label for="municipio" class="simesa-label">
+        Municipio de Residencia o Adscripción <span class="simesa-required" title="Campo requerido">*</span>
+      </label>
+      <div class="simesa-input-wrap">
+        <select id="municipio" name="municipio" class="simesa-select" required>
+          <option value="" disabled selected>--- Selecciona tu municipio de Hidalgo ---</option>
+          <option value="Acatlán">Acatlán</option>
+          <option value="Acaxochitlán">Acaxochitlán</option>
+          <option value="Actopan">Actopan</option>
+          <option value="Agua Blanca de Iturbide">Agua Blanca de Iturbide</option>
+          <option value="Ajacuba">Ajacuba</option>
+          <option value="Alfajayucan">Alfajayucan</option>
+          <option value="Almoloya">Almoloya</option>
+          <option value="Apan">Apan</option>
+          <option value="Atitalaquia">Atitalaquia</option>
+          <option value="Atlapexco">Atlapexco</option>
+          <option value="Atotonilco de Tula">Atotonilco de Tula</option>
+          <option value="Atotonilco el Grande">Atotonilco el Grande</option>
+          <option value="Calnali">Calnali</option>
+          <option value="Cardonal">Cardonal</option>
+          <option value="Chapantongo">Chapantongo</option>
+          <option value="Chapulhuacán">Chapulhuacán</option>
+          <option value="Chilcuautla">Chilcuautla</option>
+          <option value="Cuautepec de Hinojosa">Cuautepec de Hinojosa</option>
+          <option value="El Arenal">El Arenal</option>
+          <option value="Eloxochitlán">Eloxochitlán</option>
+          <option value="Emiliano Zapata">Emiliano Zapata</option>
+          <option value="Epazoyucan">Epazoyucan</option>
+          <option value="Francisco I. Madero">Francisco I. Madero</option>
+          <option value="Huasca de Ocampo">Huasca de Ocampo</option>
+          <option value="Huautla">Huautla</option>
+          <option value="Huazalingo">Huazalingo</option>
+          <option value="Huehuetla">Huehuetla</option>
+          <option value="Huejutla de Reyes">Huejutla de Reyes</option>
+          <option value="Huichapan">Huichapan</option>
+          <option value="Ixmiquilpan">Ixmiquilpan</option>
+          <option value="Jacala de Ledezma">Jacala de Ledezma</option>
+          <option value="Jaltocán">Jaltocán</option>
+          <option value="Juárez Hidalgo">Juárez Hidalgo</option>
+          <option value="La Misión">La Misión</option>
+          <option value="Lolotla">Lolotla</option>
+          <option value="Metepec">Metepec</option>
+          <option value="Metztitlán">Metztitlán</option>
+          <option value="Mineral de la Reforma">Mineral de la Reforma</option>
+          <option value="Mineral del Chico">Mineral del Chico</option>
+          <option value="Mineral del Monte">Mineral del Monte</option>
+          <option value="Mixquiahuala de Juárez">Mixquiahuala de Juárez</option>
+          <option value="Molango de Escamilla">Molango de Escamilla</option>
+          <option value="Nicolás Flores">Nicolás Flores</option>
+          <option value="Nopala de Villagrán">Nopala de Villagrán</option>
+          <option value="Omitlán de Juárez">Omitlán de Juárez</option>
+          <option value="Pachuca de Soto">Pachuca de Soto</option>
+          <option value="Pacula">Pacula</option>
+          <option value="Pisaflores">Pisaflores</option>
+          <option value="Progreso de Obregón">Progreso de Obregón</option>
+          <option value="San Agustín Metzquititlán">San Agustín Metzquititlán</option>
+          <option value="San Agustín Tlaxiaca">San Agustín Tlaxiaca</option>
+          <option value="San Bartolo Tutotepec">San Bartolo Tutotepec</option>
+          <option value="San Felipe Orizatlán">San Felipe Orizatlán</option>
+          <option value="San Salvador">San Salvador</option>
+          <option value="Santiago de Anaya">Santiago de Anaya</option>
+          <option value="Santiago Tulantepec de Lugo Guerrero">Santiago Tulantepec de Lugo Guerrero</option>
+          <option value="Singuilucan">Singuilucan</option>
+          <option value="Tasquillo">Tasquillo</option>
+          <option value="Tecozautla">Tecozautla</option>
+          <option value="Tenango de Doria">Tenango de Doria</option>
+          <option value="Tepeapulco">Tepeapulco</option>
+          <option value="Tepehuacán de Guerrero">Tepehuacán de Guerrero</option>
+          <option value="Tepeji del Río de Ocampo">Tepeji del Río de Ocampo</option>
+          <option value="Tepetitlán">Tepetitlán</option>
+          <option value="Tetepango">Tetepango</option>
+          <option value="Tezontepec de Aldama">Tezontepec de Aldama</option>
+          <option value="Tianguistengo">Tianguistengo</option>
+          <option value="Tizayuca">Tizayuca</option>
+          <option value="Tlahuelilpan">Tlahuelilpan</option>
+          <option value="Tlahuiltepa">Tlahuiltepa</option>
+          <option value="Tlanalapa">Tlanalapa</option>
+          <option value="Tlanchinol">Tlanchinol</option>
+          <option value="Tlaxcoapan">Tlaxcoapan</option>
+          <option value="Tolcayuca">Tolcayuca</option>
+          <option value="Tula de Allende">Tula de Allende</option>
+          <option value="Tulancingo de Bravo">Tulancingo de Bravo</option>
+          <option value="Villa de Tezontepec">Villa de Tezontepec</option>
+          <option value="Xochiatipan">Xochiatipan</option>
+          <option value="Xochicoatlán">Xochicoatlán</option>
+          <option value="Yahualica">Yahualica</option>
+          <option value="Zacualtipán de Ángeles">Zacualtipán de Ángeles</option>
+          <option value="Zapotlán de Juárez">Zapotlán de Juárez</option>
+          <option value="Zempoala">Zempoala</option>
+          <option value="Zimapán">Zimapán</option>
+        </select>
+      </div>
+      <div class="simesa-field-error" id="error-municipio"></div>
+    </div>
+
+    <!-- 4. Comentarios Opcionales -->
+    <div class="simesa-field-group" id="group-comentarios">
+      <label for="comentarios" class="simesa-label">
+        Comentarios / Centro de Trabajo <span class="simesa-optional">(Opcional)</span>
+      </label>
+      <div class="simesa-input-wrap">
+        <textarea 
+          id="comentarios" 
+          name="comentarios" 
+          class="simesa-textarea" 
+          rows="3" 
+          placeholder="Hospital, clínica, turno o inquietudes..."></textarea>
+      </div>
+      <div class="simesa-field-error" id="error-comentarios"></div>
+    </div>
+
+    <!-- 5. Reglas de Privacidad y Leyenda -->
+    <div class="simesa-privacy-box">
+      <div class="simesa-privacy-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v2h-2V7zm0 4h2v6h-2v-6z"/>
+        </svg>
+      </div>
+      <div class="simesa-privacy-text">
+        <strong>Compromiso de Privacidad:</strong> SIMESA Sección Hidalgo <strong>NO solicita CURP, RFC ni claves presupuestales</strong> en este portal. Tus datos son estrictamente confidenciales y protegidos. Consulta nuestro <a href="javascript:void(0)" id="simesa-link-privacy">Aviso de Privacidad de SIMESA Sección Hidalgo</a>.
+      </div>
+    </div>
+
+    <!-- 6. Botón de Envío -->
+    <div class="simesa-field-group" style="margin-bottom: 0;">
+      <button type="submit" id="simesa-btn-submit" class="simesa-btn-primary">
+        <span id="simesa-btn-text">Enviar Registro de Pre-Afiliación</span>
+        <svg id="simesa-btn-spinner" class="simesa-spinner" style="display:none;" viewBox="0 0 24 24" width="20" height="20">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"></circle>
+          <path fill="currentColor" opacity="0.8" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- MODAL: Éxito (HTTP 201 Created) -->
+<div id="simesa-modal-success" class="simesa-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="simesa-modal-success-title">
+  <div class="simesa-modal-card">
+    <div class="simesa-modal-success-icon">
+      <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+    </div>
+    <h3 class="simesa-modal-title" id="simesa-modal-success-title">¡Registro Recibido con Éxito!</h3>
+    <p id="simesa-modal-success-message" class="simesa-modal-desc">
+      Registro recibido exitosamente. Un delegado regional de SIMESA se pondrá en contacto contigo.
+    </p>
+    <button type="button" class="simesa-modal-btn" id="simesa-btn-close-success">Entendido, gracias</button>
+  </div>
+</div>
+
+<!-- MODAL: Aviso de Privacidad -->
+<div id="simesa-modal-privacy" class="simesa-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="simesa-privacy-title">
+  <div class="simesa-modal-card">
+    <button type="button" class="simesa-modal-close-icon" id="simesa-btn-close-privacy-x" aria-label="Cerrar modal">&times;</button>
+    <h3 class="simesa-modal-title" id="simesa-privacy-title">Aviso de Privacidad</h3>
+    <div class="simesa-privacy-content">
+      <h4>Sindicato Mexicano de Salud (SIMESA) - Sección Hidalgo</h4>
+      <p><strong>Responsable del tratamiento de datos:</strong> SIMESA Sección Hidalgo, con domicilio en Avenida de Los Pinos 150, Fraccionamiento Villas del Álamo, C.P. 42184, Mineral de la Reforma, Hidalgo.</p>
+      
+      <h4>Finalidad del tratamiento:</h4>
+      <p>Los datos recabados en este formulario (Nombre Completo, Teléfono Móvil, Municipio de Adscripción/Residencia y Comentarios) serán utilizados única y exclusivamente con la finalidad de establecer contacto directo por parte de un delegado regional de SIMESA, brindar orientación sobre derechos y prestaciones laborales, e iniciar el trámite voluntario de pre-afiliación sindical.</p>
+
+      <h4>Protección de datos y exclusiones:</h4>
+      <p>En estricto apego a los principios de proporcionalidad y licitud, SIMESA Sección Hidalgo <strong>NO solicita en este medio digital: CURP, RFC, claves presupuestales, datos bancarios ni información patrimonial</strong>.</p>
+
+      <h4>Derechos ARCO:</h4>
+      <p>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición de tus datos enviando un correo a <a href="mailto:contacto@simesahidalgo.org.mx" style="color:#c89933; text-decoration:underline;">contacto@simesahidalgo.org.mx</a> o llamando al teléfono <strong>77 17 71 77 17</strong>.</p>
+    </div>
+    <button type="button" class="simesa-modal-btn" id="simesa-btn-close-privacy">Cerrar Aviso</button>
+  </div>
+</div>
+
+<script id="simesa-captacion-js">
+  (function() {
+    const form = document.getElementById('simesa-captacion-form');
+    if (!form) return;
+
+    const nombreInput = document.getElementById('nombre_completo');
+    const telInput = document.getElementById('telefono');
+    const munInput = document.getElementById('municipio');
+    const comentariosInput = document.getElementById('comentarios');
+    const honeypotInput = document.getElementById('empresa_actual');
+
+    const alertBox = document.getElementById('simesa-alert-box');
+    const submitBtn = document.getElementById('simesa-btn-submit');
+    const submitText = document.getElementById('simesa-btn-text');
+    const submitSpinner = document.getElementById('simesa-btn-spinner');
+
+    const modalSuccess = document.getElementById('simesa-modal-success');
+    const modalSuccessMsg = document.getElementById('simesa-modal-success-message');
+    const btnCloseSuccess = document.getElementById('simesa-btn-close-success');
+
+    const modalPrivacy = document.getElementById('simesa-modal-privacy');
+    const linkPrivacy = document.getElementById('simesa-link-privacy');
+    const btnClosePrivacy = document.getElementById('simesa-btn-close-privacy');
+    const btnClosePrivacyX = document.getElementById('simesa-btn-close-privacy-x');
+
+    // Auto-sanitizar teléfono: restringir sólo a dígitos numéricos y máx 10
+    telInput.addEventListener('input', function() {
+      this.value = this.value.replace(/\D/g, '').slice(0, 10);
+      clearFieldError('telefono');
+    });
+
+    nombreInput.addEventListener('input', function() {
+      if (this.value.trim().length >= 5) {
+        clearFieldError('nombre_completo');
+      }
+    });
+
+    munInput.addEventListener('change', function() {
+      if (this.value) {
+        clearFieldError('municipio');
+      }
+    });
+
+    function setFieldError(fieldId, message) {
+      const input = document.getElementById(fieldId);
+      const errorDiv = document.getElementById('error-' + fieldId);
+      if (input) input.classList.add('is-invalid');
+      if (errorDiv) {
+        errorDiv.textContent = message;
+        errorDiv.style.display = 'block';
+      }
+    }
+
+    function clearFieldError(fieldId) {
+      const input = document.getElementById(fieldId);
+      const errorDiv = document.getElementById('error-' + fieldId);
+      if (input) input.classList.remove('is-invalid');
+      if (errorDiv) {
+        errorDiv.textContent = '';
+        errorDiv.style.display = 'none';
+      }
+    }
+
+    function clearAllErrors() {
+      ['nombre_completo', 'telefono', 'municipio', 'comentarios'].forEach(clearFieldError);
+      hideAlert();
+    }
+
+    function showAlert(type, messages) {
+      alertBox.className = 'simesa-alert ' + (type === 'error' ? 'simesa-alert-error' : type === 'warning' ? 'simesa-alert-warning' : 'simesa-alert-success');
+      
+      let html = '<div style="flex:1;">';
+      if (messages.length === 1) {
+        html += messages[0];
+      } else {
+        html += '<ul style="margin:0; padding-left:18px;">';
+        messages.forEach(function(m) {
+          html += '<li>' + m + '</li>';
+        });
+        html += '</ul>';
+      }
+      html += '</div>';
+
+      alertBox.innerHTML = html;
+      alertBox.style.display = 'flex';
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideAlert() {
+      alertBox.style.display = 'none';
+      alertBox.innerHTML = '';
+    }
+
+    function setLoading(isLoading) {
+      if (isLoading) {
+        submitBtn.disabled = true;
+        submitText.textContent = 'Enviando Registro...';
+        submitSpinner.style.display = 'inline-block';
+      } else {
+        submitBtn.disabled = false;
+        submitText.textContent = 'Enviar Registro de Pre-Afiliación';
+        submitSpinner.style.display = 'none';
+      }
+    }
+
+    function validateClient() {
+      let valid = true;
+      clearAllErrors();
+
+      // Validación nombre_completo: requerido, min 5 chars
+      const valNombre = (nombreInput.value || '').trim();
+      if (!valNombre) {
+        setFieldError('nombre_completo', 'El nombre completo es requerido.');
+        valid = false;
+      } else if (valNombre.length < 5) {
+        setFieldError('nombre_completo', 'El nombre completo debe tener al menos 5 caracteres.');
+        valid = false;
+      }
+
+      // Validación teléfono: requerido, regex ^[0-9]{10}$
+      const valTel = (telInput.value || '').trim();
+      const regexTel = /^[0-9]{10}$/;
+      if (!valTel) {
+        setFieldError('telefono', 'El número de teléfono es requerido.');
+        valid = false;
+      } else if (!regexTel.test(valTel)) {
+        setFieldError('telefono', 'El número de teléfono debe tener exactamente 10 dígitos numéricos.');
+        valid = false;
+      }
+
+      // Validación municipio: requerido
+      const valMun = (munInput.value || '').trim();
+      if (!valMun) {
+        setFieldError('municipio', 'Por favor selecciona un municipio de la lista.');
+        valid = false;
+      }
+
+      return valid;
+    }
+
+    // Modales
+    function openModal(modalEl) {
+      if (modalEl) modalEl.classList.add('is-open');
+    }
+
+    function closeModal(modalEl) {
+      if (modalEl) modalEl.classList.remove('is-open');
+    }
+
+    if (linkPrivacy) {
+      linkPrivacy.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(modalPrivacy);
+      });
+    }
+
+    if (btnClosePrivacy) {
+      btnClosePrivacy.addEventListener('click', function() {
+        closeModal(modalPrivacy);
+      });
+    }
+
+    if (btnClosePrivacyX) {
+      btnClosePrivacyX.addEventListener('click', function() {
+        closeModal(modalPrivacy);
+      });
+    }
+
+    if (btnCloseSuccess) {
+      btnCloseSuccess.addEventListener('click', function() {
+        closeModal(modalSuccess);
+      });
+    }
+
+    [modalSuccess, modalPrivacy].forEach(function(modal) {
+      if (!modal) return;
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          closeModal(modal);
+        }
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal(modalSuccess);
+        closeModal(modalPrivacy);
+      }
+    });
+
+    // Envío del Formulario
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (!validateClient()) {
+        return;
+      }
+
+      // Detección de base URL según directiva (local vs prod)
+      let apiBaseUrl = 'https://simesahidalgo.org';
+      if (typeof window.SIMESA_API_BASE_URL !== 'undefined' && window.SIMESA_API_BASE_URL) {
+        apiBaseUrl = window.SIMESA_API_BASE_URL;
+      } else {
+        const host = window.location.hostname;
+        if (['localhost', '127.0.0.1', ''].includes(host) || window.location.protocol === 'file:') {
+          apiBaseUrl = 'http://127.0.0.1:8000';
+        }
+      }
+
+      const endpoint = apiBaseUrl.replace(/\/+$/, '') + '/api/v1/captacion/registro/';
+
+      const payload = {
+        nombre_completo: (nombreInput.value || '').trim(),
+        telefono: (telInput.value || '').trim(),
+        municipio: (munInput.value || '').trim(),
+        comentarios: (comentariosInput.value || '').trim(),
+        empresa_actual: (honeypotInput.value || '').trim()
+      };
+
+      setLoading(true);
+      hideAlert();
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        let data = null;
+        try {
+          data = await response.json();
+        } catch (jsonErr) {
+          data = null;
+        }
+
+        if (response.status === 201) {
+          // HTTP 201 Created: Limpiar formulario y modal amigable
+          form.reset();
+          const msg = data && data.message ? data.message : 'Registro recibido exitosamente. Un delegado regional de SIMESA se pondrá en contacto contigo.';
+          if (modalSuccessMsg) modalSuccessMsg.textContent = msg;
+          openModal(modalSuccess);
+        } else if (response.status === 400) {
+          // HTTP 400 Bad Request: Resaltar campos con error
+          let errorList = [];
+          if (data && Array.isArray(data.errors)) {
+            errorList = data.errors;
+            // Si el error menciona teléfono, resaltar teléfono
+            data.errors.forEach(function(err) {
+              const lower = err.toLowerCase();
+              if (lower.includes('teléfono') || lower.includes('telefono')) {
+                setFieldError('telefono', err);
+              } else if (lower.includes('nombre')) {
+                setFieldError('nombre_completo', err);
+              } else if (lower.includes('municipio')) {
+                setFieldError('municipio', err);
+              }
+            });
+          } else if (data && typeof data.errors === 'object') {
+            for (const [key, val] of Object.entries(data.errors)) {
+              const msgText = Array.isArray(val) ? val.join(' ') : String(val);
+              setFieldError(key, msgText);
+              errorList.push(msgText);
+            }
+          } else if (data && data.message) {
+            errorList.push(data.message);
+          } else {
+            errorList.push('Los datos enviados contienen errores. Por favor revisa los campos señalados.');
+          }
+          showAlert('error', errorList);
+        } else if (response.status === 429) {
+          // HTTP 429 Too Many Requests
+          showAlert('warning', ['Has excedido el límite temporal de intentos. Por favor espera unos minutos antes de volver a intentar.']);
+        } else {
+          // Otro error de servidor
+          const genericMsg = data && data.message ? data.message : 'Ocurrió un error en el servidor (' + response.status + '). Por favor intenta de nuevo más tarde o comunícate al 77 17 71 77 17.';
+          showAlert('error', [genericMsg]);
+        }
+      } catch (networkError) {
+        console.error('SIMESA-Nexus conexión fallida:', networkError);
+        showAlert('error', ['No fue posible conectar con el servidor de SIMESA. Por favor verifica tu conexión a internet o intenta nuevamente en unos momentos.']);
+      } finally {
+        setLoading(false);
+      }
+    });
+  })();
+</script>
+<!-- ========================================================
+     FIN: FORMULARIO DE CAPTACIÓN SIMESA-NEXUS
+======================================================== -->
 
 
 </div>
