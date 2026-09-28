@@ -2062,8 +2062,8 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
       </svg>
       SIMESA-Nexus
     </span>
-    <h3 class="simesa-form-title">Pre-Afiliación Sindical</h3>
-    <p class="simesa-form-subtitle">Sindicato Mexicano de Salud - Sección Hidalgo. Envía tus datos y un delegado regional se pondrá en contacto para resolver tus dudas y orientarte en el proceso.</p>
+    <h3 class="simesa-form-title">Información y Asesoría Sindical</h3>
+    <p class="simesa-form-subtitle">Sindicato Mexicano de Salud - Sección Hidalgo. Envía tus datos y un delegado regional se pondrá en contacto contigo para resolver tus dudas y orientarte sin compromiso.</p>
   </div>
 
   <!-- Contenedor dinámico de alertas -->
@@ -2245,7 +2245,7 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
     <!-- 6. Botón de Envío -->
     <div class="simesa-field-group" style="margin-bottom: 0;">
       <button type="submit" id="simesa-btn-submit" class="simesa-btn-primary">
-        <span id="simesa-btn-text">Enviar Registro de Pre-Afiliación</span>
+        <span id="simesa-btn-text">Solicitar Información y Asesoría</span>
         <svg id="simesa-btn-spinner" class="simesa-spinner" style="display:none;" viewBox="0 0 24 24" width="20" height="20">
           <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.25"></circle>
           <path fill="currentColor" opacity="0.8" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
@@ -2263,9 +2263,9 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
         <polyline points="20 6 9 17 4 12"></polyline>
       </svg>
     </div>
-    <h3 class="simesa-modal-title" id="simesa-modal-success-title">¡Registro Recibido con Éxito!</h3>
+    <h3 class="simesa-modal-title" id="simesa-modal-success-title">¡Solicitud Recibida con Éxito!</h3>
     <p id="simesa-modal-success-message" class="simesa-modal-desc">
-      Registro recibido exitosamente. Un delegado regional de SIMESA se pondrá en contacto contigo.
+      Registro recibido exitosamente. Un delegado regional de SIMESA se pondrá en contacto contigo para brindarte la información solicitada.
     </p>
     <button type="button" class="simesa-modal-btn" id="simesa-btn-close-success">Entendido, gracias</button>
   </div>
@@ -2389,11 +2389,11 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
     function setLoading(isLoading) {
       if (isLoading) {
         submitBtn.disabled = true;
-        submitText.textContent = 'Enviando Registro...';
+        submitText.textContent = 'Enviando Solicitud...';
         submitSpinner.style.display = 'inline-block';
       } else {
         submitBtn.disabled = false;
-        submitText.textContent = 'Enviar Registro de Pre-Afiliación';
+        submitText.textContent = 'Solicitar Información y Asesoría';
         submitSpinner.style.display = 'none';
       }
     }
