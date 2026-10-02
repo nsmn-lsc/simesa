@@ -2489,15 +2489,12 @@ Estaremos encantados de resolver tus dudas y brindarte más información.
         return;
       }
 
-      // Detección de base URL según directiva (local vs prod)
-      let apiBaseUrl = 'https://simesahidalgo.org';
+      // Detección de base URL de la API
+      let apiBaseUrl = 'https://afiliacion.simesahidalgo.org.mx';
       if (typeof window.SIMESA_API_BASE_URL !== 'undefined' && window.SIMESA_API_BASE_URL) {
         apiBaseUrl = window.SIMESA_API_BASE_URL;
-      } else {
-        const host = window.location.hostname;
-        if (['localhost', '127.0.0.1', ''].includes(host) || window.location.protocol === 'file:') {
-          apiBaseUrl = 'http://127.0.0.1:8000';
-        }
+      } else if (window.USE_LOCAL_API) {
+        apiBaseUrl = 'http://127.0.0.1:8000';
       }
 
       const endpoint = apiBaseUrl.replace(/\/+$/, '') + '/api/v1/captacion/registro/';
